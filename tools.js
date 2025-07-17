@@ -8,7 +8,7 @@ const allTools = [
         title: 'AI Writer Pro',
         description: 'Advanced AI for generating high-quality articles, blogs, and marketing copy.',
         category: 'Writing',
-        link: 'https://www.example.com/aiwriter'
+        link: 'https://www.grammarly.com'
     },
     {
         id: '2',
