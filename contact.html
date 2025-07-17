@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AI Tools Directory</title>
+    <meta name="description" content="Get in touch with AI Tools Pro for support, inquiries, or feedback.">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-poppins transition-colors duration-300">
+
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none transition-opacity duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="p-4 shadow-md dark:shadow-none bg-white dark:bg-gray-800 fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600">AI Tools Pro</a>
+            <div class="flex items-center space-x-4">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="/" class="hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition-colors duration-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition-colors duration-200">Contact</a></li>
+                </ul>
+                <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none">
+                    <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                    <i class="fas fa-moon text-gray-300 hidden dark:inline-block"></i>
+                </button>
+                <button class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none" id="mobileMenuButton">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-gray-900 z-40 hidden md:hidden flex flex-col items-center justify-center space-y-8 text-xl">
+            <button class="absolute top-4 right-4 text-gray-800 dark:text-gray-200 focus:outline-none" id="closeMobileMenuButton">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <a href="/" class="hover:text-blue-600 transition-colors duration-200" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Home</a>
+            <a href="about.html" class="hover:text-blue-600 transition-colors duration-200" onclick="document.getElementById('mobileMenu').classList.add('hidden')">About</a>
+            <a href="contact.html" class="hover:text-blue-600 transition-colors duration-200" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16">
+        <section class="container mx-auto px-4 py-12">
+            <h1 class="text-4xl font-bold text-center mb-8">Contact Us</h1>
+            <div class="max-w-xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl">
+                <p class="text-center text-lg mb-6">
+                    Have questions, feedback, or need support? Reach out to us using the form below.
+                </p>
+                <form action="mailto:your_email@example.com" method="post" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold text-white mb-2">AI Tools Pro</h3>
+                <p class="text-sm">&copy; 2025 AI Tools Pro. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-lg font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-center md:text-left">
+                    <li><a href="about.html" class="hover:text-blue-500 transition-colors duration-200">About Us</a></li>
+                    <li><a href="privacy.html" class="hover:text-blue-500 transition-colors duration-200">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-500 transition-colors duration-200">Terms of Service</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-500 transition-colors duration-200">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-lg font-semibold text-white mb-3">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-300 hover:text-blue-500 transition-colors duration-200 text-2xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-300 hover:text-blue-500 transition-colors duration-200 text-2xl" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/yourchannel" target="_blank" class="text-gray-300 hover:text-blue-500 transition-colors duration-200 text-2xl" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // General UI/UX interactions (duplicated for simplicity, in a real project, put common scripts in a shared JS file)
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeMobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                    scrollToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    scrollToTopBtn.classList.remove('opacity-100', 'visible');
+                    scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
