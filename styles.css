@@ -1,0 +1,124 @@
+/* Custom Styles for AI Tool Directory */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Default Light Mode Gradients */
+    --gradient-start: #60a5fa; /* Blue-400 */
+    --gradient-end: #3b82f6;   /* Blue-500 */
+}
+
+.dark {
+    /* Dark Mode Gradients */
+    --gradient-start: #1a202c; /* Gray-900 */
+    --gradient-end: #2d3748;   /* Gray-800 */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Glassmorphism/Gradient Background for Hero Section */
+#glassmorphism-bg {
+    position: absolute;
+    inset: 0;
+    /* backdrop-filter will be controlled by JS for theme toggle */
+    /* background will be controlled by JS for theme toggle */
+    z-index: 0;
+    transition: backdrop-filter 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Tool Card Animations */
+.tool-card {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 1rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    background-color: #fff; /* bg-white */
+}
+
+.dark .tool-card {
+    background-color: #1f2937; /* bg-gray-800 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+}
+
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.tool-card:hover {
+    transform: perspective(1000px) rotateY(5deg) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .tool-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Category Button Active State */
+.category-btn.active {
+    background-color: #3b82f6; /* Tailwind blue-500 */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.dark .category-btn.active {
+    background-color: #1d4ed8; /* Tailwind blue-700 for dark mode */
+}
+
+/* Hide scrollbar for a cleaner look if desired, but still allow scrolling */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.dark::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.dark::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Ensure smooth transitions for theme changes */
+body, header, footer, .tool-card, button, a, input {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
